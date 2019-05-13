@@ -15,8 +15,8 @@ if __name__ == '__main__':
                 found_text = re.search(search_text, line)
 
                 if exclude and not found_text:
-                    print(line)
+                    print(line.rstrip())
                 elif not exclude and found_text:
-                    print(line)
+                    print(line.rstrip())
     except Exception as e:
         print('There was an exception!\n{}'.format(e))
